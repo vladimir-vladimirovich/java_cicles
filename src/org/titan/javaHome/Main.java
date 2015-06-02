@@ -10,11 +10,11 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         int n = 15;
-        int[] mas = new int[n];
+        int[] mas = new int[n]; //TODO find better names
         int[] mas1 = new int[n];
         Random rand = new Random();
         System.out.println("========================Find max element=================================");
-//  Generating a mas
+//  Generating a mas //TODO use code style
         for (int i = 0; i < mas.length; i++) {
             mas[i] = rand.nextInt(20);
         }
@@ -33,7 +33,7 @@ public class Main {
 
 //  Sotring a mas
         for (int i = 0; i < mas.length; i++) {
-            for (int j = 0; j < mas.length - 1; j++) {
+            for (int j = 0; j < mas.length - 1; j++) { //TODO find better algorithm
                 if (mas[j] > mas[j + 1]) {
                     int temp = mas[j];
                     mas[j] = mas[j + 1];
@@ -56,12 +56,12 @@ public class Main {
         for (int i = 0; i < mas.length; i++) {
             if(max1 > mas[i]){
                 continue;
-            } else max1 = mas[i];
+            } else max1 = mas[i]; //TODO optimize construction
         }
 
 //  Output max
         System.out.println("Max element in mas(sorted) is: " + mas[mas.length-1]);
-        System.out.println("Max element in mas1(copied) is: " + max1);
+        System.out.println("Max element in mas1(copied) is: " + max1); // duplicates output??
         System.out.println();
 
         System.out.println("========================Arithmetic mean==================================");
@@ -69,17 +69,17 @@ public class Main {
         for (int i = 0; i < mas1.length; i++) {
             sum = sum + mas1[i];
         }
-        int arithmeticMean = sum/mas.length;
+        int arithmeticMean = sum/mas.length; //TODO use double or float
         System.out.println("Arithmetic mean is: " + arithmeticMean);
         System.out.println();
 
         System.out.println("===================The closest number to arithmetic mean=================");
 
-        int difference = 99999;  //rly big number which will be never used
+        int difference = 99999;  //rly big number which will be never used //TODO use MAX_INT
 //  Looking for minimal difference
         for (int i = 0; i < mas1.length; i++) {
             if(Math.abs(arithmeticMean - mas1[i]) < difference){
-                difference = Math.abs(arithmeticMean - mas1[i]);
+                difference = Math.abs(arithmeticMean - mas1[i]); //TODO try no duplicate code
             }
         }
 //  Create masOfDifferences
@@ -111,9 +111,7 @@ public class Main {
             }
         }
 
-
-
-
+        //TODO remove empty lines
 
     }
 }
