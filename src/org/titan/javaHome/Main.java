@@ -101,7 +101,7 @@ public class Main {
 
         int equal;
         for (int i = 0; i < mas1.length; i++) {
-            qweqweqweqweqweqweqwe;
+
         }
 
 
