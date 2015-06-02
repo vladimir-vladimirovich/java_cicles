@@ -99,9 +99,15 @@ public class Main {
 
         System.out.println("======================Output all equal numbers===========================");
 
-        int equal;
         for (int i = 0; i < mas1.length; i++) {
-
+            int equal = mas1[i];
+            for (int j = 0; j < mas1.length; j++) {
+                if(j == i){
+                    continue;
+                } else if(mas1[j] == equal){
+                    int olololol;
+                }
+            }
         }
 
 
