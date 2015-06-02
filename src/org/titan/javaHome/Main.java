@@ -99,18 +99,17 @@ public class Main {
 
         System.out.println("======================Output all equal numbers===========================");
 
+        int[] masEquals = new int[n];
+        System.out.println();
         for (int i = 0; i < mas1.length; i++) {
-            int equal = mas1[i];
-            for (int j = 0; j < mas1.length; j++) {
-                if(j == i){
+            for (int j = 0; j < masEquals.length; j++) {
+                if(i == j){
                     continue;
-                } else if(mas1[j] == equal){
-                    int olololol;
+                } else if(mas1[i] == mas1[j]){
+                    System.out.println(mas1[i]);
                 }
             }
         }
-
-
 
 
 
